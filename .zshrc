@@ -136,3 +136,18 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# ----------------------------------------------------
+# VScode codeコマンドで無理やり開く
+# ----------------------------------------------------
+function code {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        local argPath="$1"
+        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
+        open -a "Visual Studio Code" "$argPath"
+    fi
+}
+# ----------------------------------------------------
