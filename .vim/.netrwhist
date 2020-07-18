@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/Users/mejamoleo'
+let g:netrw_dirhist_8='/Users/mejamoleo/.cache'
+let g:netrw_dirhist_7='/Users/mejamoleo'
+let g:netrw_dirhist_6='/Users/mejamoleo/.ssh/config'
+let g:netrw_dirhist_5='/'
+let g:netrw_dirhist_4='/Users'
+let g:netrw_dirhist_3='/Users/mejamoleo'
+let g:netrw_dirhist_2='/Users/mejamoleo/.ssh'
+let g:netrw_dirhist_1='/Users/mejamoleo/.ssh/config'

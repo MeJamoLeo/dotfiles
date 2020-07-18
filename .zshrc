@@ -5,19 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# From 『コピペで簡単zshカスタマイズ』
-##### oh-my-zsh の設定 #####
-export ZSH=$HOME/.oh-my-zsh
  
-# たとえば oh-my-zsh テーマカラーを robbyrussell から変更する場合
-ZSH_THEME="powerlevel10k/powerlevel10k" 
  
-# oh my zsh で利用するプラグインを指定
-plugins=(zsh-completions)
-autoload -U compinit && compinit 
  
-# oh-my-zsh に変更を適用
-source $ZSH/oh-my-zsh.sh
 ##### zsh の設定 #####
 # zsh-completions の設定。コマンド補完機能
 autoload -U compinit && compinit -u
