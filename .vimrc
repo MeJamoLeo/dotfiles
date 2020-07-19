@@ -10,7 +10,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'neoclide/coc.nvim'
+Plugin 'neoclide/coc.nvim',{'do': 'yarn install --frozen-lockfile'}
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 
@@ -18,6 +18,7 @@ call vundle#end()
 filetype plugin indent on
 
 "　その他のカスタム設定を以下に書く
+map <C-b> :NERDTreeToggle<CR>
 
 
 " 必須 jjエスケープ
@@ -45,7 +46,7 @@ set showcmd
 " 行番号を表示
 set number
 " 現在の行を強調表示
-set cursorline
+" set cursorline
 " 行末の1文字先までカーソルを移動できるように
 set virtualedit=onemore
 " インデントはスマートインデント
