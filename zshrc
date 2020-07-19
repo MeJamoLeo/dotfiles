@@ -1,13 +1,26 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# link test
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
- 
- 
- 
+# Customize to your needs...
+export PATH="$HOME/.anyenv/bin:$PATH"
+
+
+# テーマの設定
+eval "$(starship init zsh)"
+
+
+
+
 ##### zsh の設定 #####
 # zsh-completions の設定。コマンド補完機能
 autoload -U compinit && compinit -u
@@ -117,7 +130,8 @@ setopt pushd_ignore_dups
 # 拡張 glob を有効にすると # ~ ^ もパターンとして扱われる
 # glob: パス名にマッチするワイルドカードパターンのこと
 # ※ たとえば mv hoge.* ~/dir というコマンドにおける * のこと
-setopt extended_glob
+# [:メモ]gitのidを使ったissueとの連携に干渉するため，コメントアウト(2020/07/19)
+# setopt extended_glob
  
 # 単語の一部として扱われる文字のセットを指定する
 # ここではデフォルトのセットから / を抜いたものにしている
