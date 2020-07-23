@@ -11,8 +11,12 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'neoclide/coc.nvim',{'do': 'yarn install --frozen-lockfile'}
+Plugin 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
+
+" erbのために入れた．
+Plugin 'othree/html5.vim'
 
 call vundle#end()
 filetype plugin indent on
