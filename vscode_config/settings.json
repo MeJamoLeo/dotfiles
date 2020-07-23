@@ -1,0 +1,155 @@
+{
+  //----------------------------------------------------
+  // ワークベンチ
+  //----------------------------------------------------
+  "workbench": {
+    "colorTheme": "Tokyo Night",
+    "iconTheme": "material-icon-theme",
+    "editor": {
+      "showTabs": true,
+      "highlightModifiedTabs": true,
+      "tabSizing": "shrink",
+      "tabCloseButton": "off"
+    },
+    "startupEditor": "off",
+    "activityBar": {
+      "visible": false
+    }
+  },
+  //----------------------------------------------------
+  // エディタ
+  //----------------------------------------------------
+  "editor": {
+    "fontSize": 9,
+    "fontFamily": "Roboto Mono Medium for Powerline",
+    "wordWrap": "on",
+    "formatOnSave": true,
+    "formatOnPaste": true,
+    "suggestSelection": "first",
+    "minimap": {
+      "enabled": false
+    }
+  },
+  //----------------------------------------------------
+  // ターミナル
+  //----------------------------------------------------
+  "terminal.integrated": {
+    "copyOnSelection": true,
+    "fontSize": 10,
+    "fontFamily": "MesloLGL Nerd Font"
+  },
+  //----------------------------------------------------
+  // vim
+  //----------------------------------------------------
+  "vim": {
+    "easymotion": true,
+    "easymotiondimbackground": true,
+    "easymotionmarkerforegroundcoloronechar": "#da70d6",
+    "incsearch": true,
+    "usesystemclipboard": true,
+    "useCtrlKeys": true,
+    "hlsearch": true,
+    // vimキーバインド変更
+    "insertModeKeyBindings": [
+      {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "d"],
+        "after": ["d", "d"]
+      },
+      {
+        "before": ["<C-n>"],
+        "commands": [":nohl"]
+      }
+    ],
+    "leader": "<space>",
+    "handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false
+    },
+    // vimのステータスバー周りの設定
+    "statusBarColorControl": true,
+    "statusBarColors": {
+      "normal": ["#161821", "#818596"],
+      "insert": ["#84A0C6", "#161821"],
+      "visual": ["#B4BE82", "#161821"],
+      "visualline": ["#B4BE82", "#161821"],
+      "visualblock": ["#B4BE82", "#161821"],
+      "replace": ["#E2A478", "#161821"],
+      "commandlineinprogress": ["#818596", "#161821"],
+      "searchinprogressmode": ["#818596", "#161821"],
+      "easymotionmode": ["#818596", "#161821"],
+      "easymotioninputmode": ["#818596", "#161821"],
+      "surroundinputmode": ["#818596", "#161821"]
+    }
+  },
+  //----------------------------------------------------
+  // その他
+  //----------------------------------------------------
+  "files.trimTrailingWhitespace": true,
+  "search.searchOnType": false,
+  "window.zoomLevel": 0,
+  "emmet": {
+    "includeLanguages": {
+      "erb": "html"
+    }
+  },
+  //****************************************************
+  // 拡張機能
+  //****************************************************
+  // spell checker
+  "cSpell": {
+    "enabledLanguageIds": [
+      "css",
+      "html",
+      "javascript",
+      "json",
+      "less",
+      "markdown",
+      "plaintext",
+      "scss",
+      "text",
+      "ruby",
+      "yaml",
+      "yml"
+    ]
+  },
+  // background-cover
+  "backgroundCover": {
+    "imagePath": "/Users/mejamoleo/Pictures/image_for_vscode/max-mckinnon-c9OCWLka764-unsplash.jpg",
+    "randomImageFolder": "/Users/mejamoleo/Pictures/image_for_vscode",
+    "opacity": 1
+  },
+  // vscode インテリコード
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  // beautify フォーマッター
+  "beautify.language": {
+    "js": {
+      "type": ["javascript", "json", "jsonc"],
+      "filename": [".jshintrc", ".jsbeautifyrc"]
+    },
+    "css": ["css", "less", "scss"],
+    "html": ["htm", "html", "erb"]
+  },
+  //----------------------------------------------------
+  // 言語系
+  //----------------------------------------------------
+  "ruby.useBundler": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#84A0C6",
+    "statusBar.noFolderBackground": "#84A0C6",
+    "statusBar.debuggingBackground": "#84A0C6",
+    "statusBar.foreground": "#161821"
+  }
+  //****************************************************
+  // (終わり)
+  //****************************************************
+
+  //****************************************************
+  // 未設定
+  //****************************************************
+}
