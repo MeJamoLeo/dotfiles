@@ -36,6 +36,9 @@ eval "$(anyenv init -)"
 export PATH="$HOME/.anyenv/envs/nodenv/versions/*/bin:$PATH"
 export PATH="$HOME/dotfiles/bin:$PATH"
 
+#----------------------------------------------------
+# 
+#----------------------------------------------------
 
 
 # Ensure path arrays do not contain duplicates.

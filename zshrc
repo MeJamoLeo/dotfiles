@@ -112,7 +112,7 @@ setopt hist_ignore_space
 setopt hist_reduce_blanks
  
 # キーバインディングを emacs 風にする
-bindkey -d
+
 bindkey -e
  
 # 補完で小文字でも大文字にマッチさせる
@@ -152,14 +152,14 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 # ----------------------------------------------------
 # VScode codeコマンドで無理やり開く
 # ----------------------------------------------------
-function code {
-    if [[ $# = 0 ]]
-    then
-        open -a "Visual Studio Code"
-    else
-        local argPath="$1"
-        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
-        open -a "Visual Studio Code" "$argPath"
-    fi
-}
+#  function code {
+#      if [[ $# = 0 ]]
+#      then
+#          open -a "Visual Studio Code"
+#      else
+#          local argPath="$1"
+#          [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
+#          open -a "Visual Studio Code" "$argPath"
+#      fi
+#  }
 # ----------------------------------------------------
