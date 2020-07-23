@@ -32,13 +32,17 @@ git config --global color.ui auto
 alias his='history'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias e="emacs"
 alias v='vim'
 alias vi='vim'
 alias mss='mysql.server start'
 alias so='source'
 alias be='bundle exec'
 alias ber='bundle exec ruby'
+alias e='exa'
+alias ea='exa -a'
+alias ela='exa -ala'
+alias ei='exa --icon'
+alias tree='exa -T --icons'
  
 # エイリアス: git 系
 alias g='git'
@@ -63,6 +67,10 @@ alias gst='git stash'
 alias gsl='git stash list'
 alias gsu='git stash -u'
 alias gsp='git stash pop'
+
+# エイリアス: lazy 系
+alias lag='lazygit'
+alias lad='lazydocker'
  
 # 色を使用出来るようにする
 autoload -Uz colors
