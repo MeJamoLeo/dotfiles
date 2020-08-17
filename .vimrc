@@ -22,11 +22,16 @@ call vundle#end()
 filetype plugin indent on
 
 "　その他のカスタム設定を以下に書く
+"===================================================
+" 必須
+"===================================================
+" jjエスケープ
+inoremap <silent> jj <ESC>
+" <leader>をスペースキーに設定する
+let mapleader = "\<Space>"
+"===================================================
 map <C-b> :NERDTreeToggle<CR>
 
-
-" 必須 jjエスケープ
-inoremap <silent> jj <ESC>
 
 " airline 設定
 let g:airline_theme='papercolor'

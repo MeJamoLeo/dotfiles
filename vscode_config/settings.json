@@ -3,7 +3,7 @@
   // ワークベンチ
   //----------------------------------------------------
   "workbench": {
-    "colorTheme": "Tokyo Night",
+    "colorTheme": "Ayu Dark",
     "iconTheme": "material-icon-theme",
     "editor": {
       "showTabs": true,
@@ -20,8 +20,9 @@
   // エディタ
   //----------------------------------------------------
   "editor": {
-    "fontSize": 9,
-    "fontFamily": "Roboto Mono Medium for Powerline",
+    "fontSize": 11,
+    "fontFamily": "FiraCode-Bold",
+    "fontLigatures": true,
     "wordWrap": "on",
     "formatOnSave": true,
     "formatOnPaste": true,
@@ -35,7 +36,7 @@
   //----------------------------------------------------
   "terminal.integrated": {
     "copyOnSelection": true,
-    "fontSize": 10,
+    "fontSize": 12,
     "fontFamily": "MesloLGL Nerd Font"
   },
   //----------------------------------------------------
@@ -49,6 +50,7 @@
     "usesystemclipboard": true,
     "useCtrlKeys": true,
     "hlsearch": true,
+    "sorround": true,
     // vimキーバインド変更
     "insertModeKeyBindings": [
       {
@@ -265,11 +267,13 @@
   },
   "cSpell.userWords": [
     "Gemfile",
+    "Micropost",
     "bootstrap",
     "bootstrap sprokets",
     "datetime",
     "downcase",
     "hexdigest",
+    "microposts",
     "minitest",
     "mixins",
     "nonblank",
@@ -283,13 +287,34 @@
     "sqlite",
     "stylesheets",
     "uneditable",
+    "unfollow",
+    "unfollowed",
     "upcase",
-    "urlsafe"
+    "urlsafe",
+    "vimindmeister"
   ],
   "backgroundCover.opacity": 1,
-  "backgroundCover.imagePath": "/Users/mejamoleo/Downloads/background_images/rock.jpg",
-  "backgroundCover.randomImageFolder": "/Users/mejamoleo/Downloads/background_images",
-  "workbench.colorTheme": "Gruvbox Material Dark"
+  "backgroundCover.imagePath": "/Users/mejamoleo/Downloads/background_images/apple_background/Desert 5.jpg",
+  "backgroundCover.randomImageFolder": "/Users/mejamoleo/Downloads/background_images/apple_background",
+  "workbench.colorTheme": "Ayu Dark",
+  "[json]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "printcode.fontSize": 9,
+  "git.confirmSync": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "gitlens.gitCommands.closeOnFocusOut": true,
+  "[php]": {
+    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+  },
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.lastDownload": 1597432461000
   //****************************************************
   // (終わり)
   //****************************************************
