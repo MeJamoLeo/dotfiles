@@ -260,10 +260,10 @@
   //----------------------------------------------------
   "ruby.useBundler": true,
   "workbench.colorCustomizations": {
-    "statusBar.background": "#161821",
-    "statusBar.noFolderBackground": "#161821",
-    "statusBar.debuggingBackground": "#161821",
-    "statusBar.foreground": "#818596"
+    "statusBar.background": "#818596",
+    "statusBar.noFolderBackground": "#818596",
+    "statusBar.debuggingBackground": "#818596",
+    "statusBar.foreground": "#161821"
   },
   "cSpell.userWords": [
     "Gemfile",
@@ -314,7 +314,10 @@
     "editor.defaultFormatter": "junstyle.php-cs-fixer"
   },
   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1597432461000
+  "php-cs-fixer.lastDownload": 1597432461000,
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.fontFamily": "FiraCode Nerd Font Mono"
   //****************************************************
   // (終わり)
   //****************************************************
