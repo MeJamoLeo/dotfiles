@@ -260,10 +260,10 @@
   //----------------------------------------------------
   "ruby.useBundler": true,
   "workbench.colorCustomizations": {
-    "statusBar.background": "#818596",
-    "statusBar.noFolderBackground": "#818596",
-    "statusBar.debuggingBackground": "#818596",
-    "statusBar.foreground": "#161821"
+    "statusBar.background": "#161821",
+    "statusBar.noFolderBackground": "#161821",
+    "statusBar.debuggingBackground": "#161821",
+    "statusBar.foreground": "#818596"
   },
   "cSpell.userWords": [
     "Gemfile",
@@ -273,6 +273,8 @@
     "datetime",
     "downcase",
     "hexdigest",
+    "laravel",
+    "mailtrap",
     "microposts",
     "minitest",
     "mixins",
@@ -283,6 +285,7 @@
     "rubygems",
     "signup",
     "signup path",
+    "smtp",
     "sprokets",
     "sqlite",
     "stylesheets",
@@ -311,13 +314,17 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "gitlens.gitCommands.closeOnFocusOut": true,
   "[php]": {
-    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
   "php-cs-fixer.lastDownload": 1597432461000,
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-  "editor.fontFamily": "FiraCode Nerd Font Mono"
+  "editor.fontFamily": "FiraCode Nerd Font Mono",
+  "intelephense.diagnostics.undefinedClassConstants": false,
+  "intelephense.diagnostics.undefinedConstants": false,
+  "intelephense.diagnostics.undefinedFunctions": false,
+  "intelephense.diagnostics.undefinedMethods": false
   //****************************************************
   // (終わり)
   //****************************************************
