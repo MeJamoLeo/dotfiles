@@ -41,3 +41,4 @@ cask "slack"
 cask "toggl"
 cask "visual-studio-code"
 cask "wireshark"
+mas "Git Streaks", id: 1525795950
