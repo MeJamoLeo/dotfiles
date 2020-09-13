@@ -67,22 +67,22 @@
         "before": ["<C-n>"],
         "commands": [":nohl"]
       },
-      {
-        "before": ["J"],
-        "after": ["1", "0", "j"]
-      }, //移動を早める
-      {
-        "before": ["K"],
-        "after": ["1", "0", "k"]
-      }, //移動を早める
-      {
-        "before": ["H"],
-        "after": ["0"]
-      }, //端に移動
-      {
-        "before": ["L"],
-        "after": ["$"]
-      }, //端に移動
+      // {
+      //   "before": ["J"],
+      //   "after": ["1", "0", "j"]
+      // }, //移動を早める
+      // {
+      //   "before": ["K"],
+      //   "after": ["1", "0", "k"]
+      // }, //移動を早める
+      // {
+      //   "before": ["H"],
+      //   "after": ["0"]
+      // }, //端に移動
+      // {
+      //   "before": ["L"],
+      //   "after": ["$"]
+      // }, //端に移動
       {
         "before": ["<Leader>", "h"],
         "after": ["<C-w>", "h"]
@@ -192,7 +192,7 @@
     },
 
     // vimのステータスバー周りの設定
-    "statusBarColorControl": true,
+    "statusBarColorControl": false,
     "statusBarColors": {
       "normal": ["#161821", "#818596"],
       "insert": ["#84A0C6", "#161821"],
@@ -212,7 +212,7 @@
   //----------------------------------------------------
   "files.trimTrailingWhitespace": true,
   "search.searchOnType": false,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "emmet": {
     "includeLanguages": {
       "erb": "html"
@@ -280,6 +280,7 @@
     "mixins",
     "nonblank",
     "path",
+    "phper",
     "postgresql",
     "railstutorial",
     "rubygems",
@@ -289,6 +290,7 @@
     "sprokets",
     "sqlite",
     "stylesheets",
+    "tmpfs",
     "uneditable",
     "unfollow",
     "unfollowed",
@@ -299,7 +301,7 @@
   "backgroundCover.opacity": 1,
   "backgroundCover.imagePath": "/Users/mejamoleo/Downloads/background_images/apple_background/Desert 5.jpg",
   "backgroundCover.randomImageFolder": "/Users/mejamoleo/Downloads/background_images/apple_background",
-  "workbench.colorTheme": "Ayu Dark",
+  "workbench.colorTheme": "ReUI Default Bordered (react-native)",
   "[json]": {
     "editor.defaultFormatter": "HookyQR.beautify"
   },
@@ -317,14 +319,21 @@
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1597432461000,
+  "php-cs-fixer.lastDownload": 1599830622984,
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
   "editor.fontFamily": "FiraCode Nerd Font Mono",
   "intelephense.diagnostics.undefinedClassConstants": false,
   "intelephense.diagnostics.undefinedConstants": false,
   "intelephense.diagnostics.undefinedFunctions": false,
-  "intelephense.diagnostics.undefinedMethods": false
+  "intelephense.diagnostics.undefinedMethods": false,
+  "intelephense.diagnostics.undefinedProperties": false,
+  "intelephense.diagnostics.undefinedTypes": false,
+  "explorer.confirmDelete": false,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "php-cs-fixer.onsave": true
   //****************************************************
   // (終わり)
   //****************************************************
