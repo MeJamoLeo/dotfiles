@@ -310,7 +310,7 @@
   "backgroundCover.opacity": 1,
   "backgroundCover.imagePath": "/Users/mejamoleo/Downloads/background_images/apple_background/Desert 5.jpg",
   "backgroundCover.randomImageFolder": "/Users/mejamoleo/Downloads/background_images/apple_background",
-  "workbench.colorTheme": "ReUI Default Bordered (react-native)",
+  "workbench.colorTheme": "Ayu Light",
   "[json]": {
     "editor.defaultFormatter": "HookyQR.beautify"
   },
