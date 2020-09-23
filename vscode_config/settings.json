@@ -13,7 +13,7 @@
     },
     "startupEditor": "off",
     "activityBar": {
-      "visible": false
+      "visible": true
     }
   },
   //----------------------------------------------------
@@ -44,7 +44,15 @@
   //----------------------------------------------------
   "vim": {
     "easymotion": true,
-    "easymotiondimbackground": true,
+    "easymotionMarkerForegroundColorOneChar": "#00F0AA",
+    "easymotionDimBackground": false,
+    "easymotionMarkerWidthPerChar": 19,
+    "easymotionMarkerHeight": 0,
+    "easymotionMarkerFontFamiliy": "Cica",
+    "easymotionMarkerFontSize": "12.5",
+    "easymotionMarkerFontWeight": "bold",
+    "easymotionKeys": "asdfhjklwqeruioopghty;",
+    "easymotionMarkerYOffset": 13.5,
     "easymotionmarkerforegroundcoloronechar": "#da70d6",
     "incsearch": true,
     "usesystemclipboard": true,
@@ -116,10 +124,10 @@
           }
         ]
       }, //定義を見る
-      {
-        "before": ["<Leader>", "s"],
-        "commands": [":split"]
-      }, //水平に開く
+      // {
+      //   "before": ["<Leader>", "s"],
+      //   "commands": [":split"]
+      // }, //水平に開く
       {
         "before": ["<Leader>", "v"],
         "commands": [":vsplit"]
@@ -212,7 +220,7 @@
   //----------------------------------------------------
   "files.trimTrailingWhitespace": true,
   "search.searchOnType": false,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "emmet": {
     "includeLanguages": {
       "erb": "html"
@@ -266,6 +274,7 @@
     "statusBar.foreground": "#818596"
   },
   "cSpell.userWords": [
+    "CODEBAS",
     "Gemfile",
     "Micropost",
     "bootstrap",
@@ -319,7 +328,7 @@
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1599830622984,
+  "php-cs-fixer.lastDownload": 1600740324373,
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
   "editor.fontFamily": "FiraCode Nerd Font Mono",
@@ -333,7 +342,11 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "php-cs-fixer.onsave": true
+  "php-cs-fixer.onsave": true,
+  "editor.tabSize": 2,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
   //****************************************************
   // (終わり)
   //****************************************************
