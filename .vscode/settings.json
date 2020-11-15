@@ -29,7 +29,9 @@
     "suggestSelection": "first",
     "minimap": {
       "enabled": false
-    }
+    },
+    "tabSize": 2,
+    "detectIndentation": false
   },
   //----------------------------------------------------
   // ターミナル
@@ -307,10 +309,14 @@
     "urlsafe",
     "vimindmeister"
   ],
-  "backgroundCover.opacity": 1,
-  "backgroundCover.imagePath": "/Users/mejamoleo/Downloads/background_images/apple_background/Desert 5.jpg",
-  "backgroundCover.randomImageFolder": "/Users/mejamoleo/Downloads/background_images/apple_background",
-  "workbench.colorTheme": "Ayu Light",
+  //****************************************************
+  // (終わり)
+  //****************************************************
+
+  //****************************************************
+  // 未設定
+  //****************************************************
+  "workbench.colorTheme": "Iceberg",
   "[json]": {
     "editor.defaultFormatter": "HookyQR.beautify"
   },
@@ -320,7 +326,6 @@
   "[javascript]": {
     "editor.defaultFormatter": "HookyQR.beautify"
   },
-  "printcode.fontSize": 9,
   "git.confirmSync": false,
   "liveServer.settings.donotShowInfoMsg": true,
   "gitlens.gitCommands.closeOnFocusOut": true,
@@ -328,7 +333,7 @@
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1600740324373,
+  "php-cs-fixer.lastDownload": 1605066114044,
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
   "editor.fontFamily": "FiraCode Nerd Font Mono",
@@ -343,15 +348,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "php-cs-fixer.onsave": true,
-  "editor.tabSize": 2,
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
-  //****************************************************
-  // (終わり)
-  //****************************************************
-
-  //****************************************************
-  // 未設定
-  //****************************************************
+  },
+  "workbench.activityBar.visible": false,
+  "explorer.confirmDragAndDrop": false,
+  "git.autofetch": true,
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7ZXJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+  "diffEditor.ignoreTrimWhitespace": false
 }

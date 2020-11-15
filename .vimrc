@@ -7,16 +7,15 @@ Plugin 'VundleVim/Vundle.vim'
 
 " 導入したいプラグインを以下に列挙
 " Plugin '[Github Author]/[Github repo]' の形式で記入
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'neoclide/coc.nvim' ,{'do': 'yarn install --frozen-lockfile'}
 Plugin 'neoclide/coc-snippets',{'do': 'yarn install --frozen-lockfile'}
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
-
-" erbのために入れた．
-Plugin 'othree/html5.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'gkeep/iceberg-dark'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
 filetype plugin indent on
@@ -27,14 +26,23 @@ filetype plugin indent on
 "===================================================
 " jjエスケープ
 inoremap <silent> jj <ESC>
+
 " <leader>をスペースキーに設定する
 let mapleader = "\<Space>"
 "===================================================
 map <C-b> :NERDTreeToggle<CR>
 
-
-" airline 設定
-let g:airline_theme='papercolor'
+let g:airline_theme = 'icebergDark'
+let g:tmuxline_theme = 'iceberg'
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'b'    : '#W',
+      \'c'    : '#H',
+      \'win'  : '#I #W',
+      \'cwin' : '#I #W',
+      \'x'    : '%a',
+      \'y'    : '#W %R',
+      \'z'    : '#H'}
 
 " setting
 "文字コードをUFT-8に設定
@@ -47,9 +55,8 @@ set noswapfile
 set autoread
 " バッファが編集中でもその他のファイルを開けるように
 set hidden
-" 入力中のコマンドをステータスに表示する
-set showcmd
-
+" deleteの有効化
+set backspace=indent,eol,start
 
 " 見た目系
 " 行番号を表示
@@ -73,6 +80,8 @@ nnoremap j gj
 nnoremap k gk
 " シンタックスハイライトの有効化
 syntax enable
+set background=dark
+colorscheme iceberg
 
 
 " Tab系
@@ -84,7 +93,8 @@ set expandtab
 set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=2
-
+" 行頭でのTab文字の表示幅
+set autoindent
 
 " 検索系
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
@@ -123,5 +133,5 @@ nmap <Tab> :tabnext<Return>
 inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
 
 set completeopt=menuone,noinsert
-inoremap <expr><C-n> pumvisible() ? "<Down>" : "<C-n>"
+inoremap <expr><c-n> pumvisible() ? "<down>" : "<c-n>"
 inoremap <expr><C-p> pumvisible() ? "<Up>" : "<C-p>"
