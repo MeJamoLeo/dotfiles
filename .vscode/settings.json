@@ -21,11 +21,11 @@
   //----------------------------------------------------
   "editor": {
     "fontSize": 11,
-    "fontFamily": "FiraCode-Bold",
+    "fontFamily": "FiraCode Nerd Font Mono",
     "fontLigatures": true,
     "wordWrap": "on",
     "formatOnSave": true,
-    "formatOnPaste": true,
+    "formatOnPaste": false,
     "suggestSelection": "first",
     "minimap": {
       "enabled": false
@@ -38,8 +38,8 @@
   //----------------------------------------------------
   "terminal.integrated": {
     "copyOnSelection": true,
-    "fontSize": 12,
-    "fontFamily": "MesloLGL Nerd Font"
+    "fontSize": 10,
+    "fontFamily": "FiraCode Nerd Font Mono"
   },
   //----------------------------------------------------
   // vim
@@ -77,22 +77,6 @@
         "before": ["<C-n>"],
         "commands": [":nohl"]
       },
-      // {
-      //   "before": ["J"],
-      //   "after": ["1", "0", "j"]
-      // }, //移動を早める
-      // {
-      //   "before": ["K"],
-      //   "after": ["1", "0", "k"]
-      // }, //移動を早める
-      // {
-      //   "before": ["H"],
-      //   "after": ["0"]
-      // }, //端に移動
-      // {
-      //   "before": ["L"],
-      //   "after": ["$"]
-      // }, //端に移動
       {
         "before": ["<Leader>", "h"],
         "after": ["<C-w>", "h"]
@@ -126,50 +110,34 @@
           }
         ]
       }, //定義を見る
-      // {
-      //   "before": ["<Leader>", "s"],
-      //   "commands": [":split"]
-      // }, //水平に開く
       {
-        "before": ["<Leader>", "v"],
+        "before": ["s", "s"],
+        "commands": [":split"]
+      }, //水平に開く
+      {
+        "before": ["s", "v"],
         "commands": [":vsplit"]
-      }, //水平にを閉じる
-      {
-        "before": [">"],
-        "commands": ["editor.action.indentLines"]
-      }, //インデント調整(repeat可能)
-      {
-        "before": ["<"],
-        "commands": ["editor.action.outdentLines"]
-      }, //インデント調整(repeat可能)
-      {
-        "before": ["<Leader>", "u"],
-        "after": ["g", "t"]
-      }, //tab移動
-      {
-        "before": ["<Leader>", "y"],
-        "after": ["g", "T"]
-      }, //tab移動
-      {
-        "before": ["<Leader>", "x"],
-        "commands": [":q!"]
-      }, //tabを閉じる
+      }, //垂直に開く
+      // {
+      //   "before": ["t", "u"],
+      //   "after": ["g", "t"]
+      // }, //tab移動
+      // {
+      //   "before": ["t", "y"],
+      //   "after": ["g", "T"]
+      // }, //tab移動
+      // {
+      //   "before": ["<Leader>", "x"],
+      //   "commands": [":q!"]
+      // }, //tabを閉じる
       {
         "before": ["<Leader>", "q"],
         "commands": [":qa!"]
       }, //すべてを閉じる
-      {
-        "before": ["<Leader>", "w"],
-        "commands": [":wa"]
-      }, //すべてを保存
-      {
-        "before": ["<Leader>", "o"],
-        "after": ["o", "<ESC>"]
-      }, //空の行を挿入
-      {
-        "before": ["<Leader>", "O"],
-        "after": ["O", "<ESC>"]
-      }, //空の行を挿入
+      // {
+      //   "before": ["<Leader>", "w"],
+      //   "commands": [":wa"]
+      // }, //すべてを保存
       {
         "before": ["<Leader>", "c"],
         "commands": [
@@ -202,20 +170,7 @@
     },
 
     // vimのステータスバー周りの設定
-    "statusBarColorControl": false,
-    "statusBarColors": {
-      "normal": ["#161821", "#818596"],
-      "insert": ["#84A0C6", "#161821"],
-      "visual": ["#B4BE82", "#161821"],
-      "visualline": ["#B4BE82", "#161821"],
-      "visualblock": ["#B4BE82", "#161821"],
-      "replace": ["#E2A478", "#161821"],
-      "commandlineinprogress": ["#818596", "#161821"],
-      "searchinprogressmode": ["#818596", "#161821"],
-      "easymotionmode": ["#818596", "#161821"],
-      "easymotioninputmode": ["#818596", "#161821"],
-      "surroundinputmode": ["#818596", "#161821"]
-    }
+    "statusBarColorControl": false
   },
   //----------------------------------------------------
   // その他
@@ -309,14 +264,6 @@
     "urlsafe",
     "vimindmeister"
   ],
-  //****************************************************
-  // (終わり)
-  //****************************************************
-
-  //****************************************************
-  // 未設定
-  //****************************************************
-  "workbench.colorTheme": "Iceberg",
   "[json]": {
     "editor.defaultFormatter": "HookyQR.beautify"
   },
@@ -327,16 +274,13 @@
     "editor.defaultFormatter": "HookyQR.beautify"
   },
   "git.confirmSync": false,
-  "liveServer.settings.donotShowInfoMsg": true,
   "gitlens.gitCommands.closeOnFocusOut": true,
   "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    "editor.defaultFormatter": "junstyle.php-cs-fixer"
   },
   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1605066114044,
+  "php-cs-fixer.lastDownload": 1608000137773,
   "workbench.iconTheme": "material-icon-theme",
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-  "editor.fontFamily": "FiraCode Nerd Font Mono",
   "intelephense.diagnostics.undefinedClassConstants": false,
   "intelephense.diagnostics.undefinedConstants": false,
   "intelephense.diagnostics.undefinedFunctions": false,
@@ -347,7 +291,6 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "php-cs-fixer.onsave": true,
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -355,5 +298,7 @@
   "explorer.confirmDragAndDrop": false,
   "git.autofetch": true,
   "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7ZXJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.colorTheme": "Iceberg",
+  "todo-tree.tree.showScanModeButton": false
 }

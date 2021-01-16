@@ -1,4 +1,3 @@
-set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -16,6 +15,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'gkeep/iceberg-dark'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'skanehira/translate.vim'
+Plugin 'ludwig/split-manpage.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -125,13 +126,6 @@ map sl <C-w>l
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
 
-
 "----------------------------------------------------
-"from 『Vimの補完を他エディタやIDEのような挙動にするようにする』
+"from 42Tokyo
 "----------------------------------------------------
-" 補完表示時のEnterで改行をしない
-inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
-
-set completeopt=menuone,noinsert
-inoremap <expr><c-n> pumvisible() ? "<down>" : "<c-n>"
-inoremap <expr><C-p> pumvisible() ? "<Up>" : "<C-p>"
