@@ -1,359 +1,400 @@
 {
-  //----------------------------------------------------
-  // ワークベンチ
-  //----------------------------------------------------
-  "workbench": {
-    "colorTheme": "Ayu Dark",
-    "iconTheme": "material-icon-theme",
-    "editor": {
-      "showTabs": true,
-      "highlightModifiedTabs": true,
-      "tabSizing": "shrink",
-      "tabCloseButton": "off"
-    },
-    "startupEditor": "off",
-    "activityBar": {
-      "visible": true
-    }
-  },
-  //----------------------------------------------------
-  // エディタ
-  //----------------------------------------------------
-  "editor": {
-    "fontSize": 11,
-    "fontFamily": "FiraCode-Bold",
-    "fontLigatures": true,
-    "wordWrap": "on",
-    "formatOnSave": true,
-    "formatOnPaste": true,
-    "suggestSelection": "first",
-    "minimap": {
-      "enabled": false
-    },
-    "tabSize": 2,
-    "detectIndentation": false
-  },
-  //----------------------------------------------------
-  // ターミナル
-  //----------------------------------------------------
-  "terminal.integrated": {
-    "copyOnSelection": true,
-    "fontSize": 12,
-    "fontFamily": "MesloLGL Nerd Font"
-  },
-  //----------------------------------------------------
-  // vim
-  //----------------------------------------------------
-  "vim": {
-    "easymotion": true,
-    "easymotionMarkerForegroundColorOneChar": "#00F0AA",
-    "easymotionDimBackground": false,
-    "easymotionMarkerWidthPerChar": 19,
-    "easymotionMarkerHeight": 0,
-    "easymotionMarkerFontFamiliy": "Cica",
-    "easymotionMarkerFontSize": "12.5",
-    "easymotionMarkerFontWeight": "bold",
-    "easymotionKeys": "asdfhjklwqeruioopghty;",
-    "easymotionMarkerYOffset": 13.5,
-    "easymotionmarkerforegroundcoloronechar": "#da70d6",
-    "incsearch": true,
-    "usesystemclipboard": true,
-    "useCtrlKeys": true,
-    "hlsearch": true,
-    "sorround": true,
-    // vimキーバインド変更
-    "insertModeKeyBindings": [
-      {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
-      }
-    ],
-    "normalModeKeyBindingsNonRecursive": [
-      {
-        "before": ["<leader>", "d"],
-        "after": ["d", "d"]
-      },
-      {
-        "before": ["<C-n>"],
-        "commands": [":nohl"]
-      },
-      // {
-      //   "before": ["J"],
-      //   "after": ["1", "0", "j"]
-      // }, //移動を早める
-      // {
-      //   "before": ["K"],
-      //   "after": ["1", "0", "k"]
-      // }, //移動を早める
-      // {
-      //   "before": ["H"],
-      //   "after": ["0"]
-      // }, //端に移動
-      // {
-      //   "before": ["L"],
-      //   "after": ["$"]
-      // }, //端に移動
-      {
-        "before": ["<Leader>", "h"],
-        "after": ["<C-w>", "h"]
-      }, //window移動
-      {
-        "before": ["<Leader>", "j"],
-        "after": ["<C-w>", "j"]
-      }, //window移動
-      {
-        "before": ["<Leader>", "k"],
-        "after": ["<C-w>", "k"]
-      }, //window移動
-      {
-        "before": ["<Leader>", "l"],
-        "after": ["<C-w>", "l"]
-      }, //window移動
-      {
-        "before": ["]"],
-        "commands": [
-          {
-            "command": "C_Cpp.PeekDeclaration"
-          }
-        ],
-        "when": ["editorLangId == c"]
-      }, //宣言を見る c専用
-      {
-        "before": ["["],
-        "commands": [
-          {
-            "command": "editor.action.peekDefinition"
-          }
-        ]
-      }, //定義を見る
-      // {
-      //   "before": ["<Leader>", "s"],
-      //   "commands": [":split"]
-      // }, //水平に開く
-      {
-        "before": ["<Leader>", "v"],
-        "commands": [":vsplit"]
-      }, //水平にを閉じる
-      {
-        "before": [">"],
-        "commands": ["editor.action.indentLines"]
-      }, //インデント調整(repeat可能)
-      {
-        "before": ["<"],
-        "commands": ["editor.action.outdentLines"]
-      }, //インデント調整(repeat可能)
-      {
-        "before": ["<Leader>", "u"],
-        "after": ["g", "t"]
-      }, //tab移動
-      {
-        "before": ["<Leader>", "y"],
-        "after": ["g", "T"]
-      }, //tab移動
-      {
-        "before": ["<Leader>", "x"],
-        "commands": [":q!"]
-      }, //tabを閉じる
-      {
-        "before": ["<Leader>", "q"],
-        "commands": [":qa!"]
-      }, //すべてを閉じる
-      {
-        "before": ["<Leader>", "w"],
-        "commands": [":wa"]
-      }, //すべてを保存
-      {
-        "before": ["<Leader>", "o"],
-        "after": ["o", "<ESC>"]
-      }, //空の行を挿入
-      {
-        "before": ["<Leader>", "O"],
-        "after": ["O", "<ESC>"]
-      }, //空の行を挿入
-      {
-        "before": ["<Leader>", "c"],
-        "commands": [
-          {
-            "command": "editor.action.commentLine"
-          }
-        ]
-      }, //コメント
-      {
-        "before": ["<Leader>", ":"],
-        "commands": [
-          {
-            "command": "workbench.action.showCommands"
-          }
-        ]
-      }, //コマンドパレット
-      {
-        "before": ["<Leader>", ";"],
-        "commands": [
-          {
-            "command": "workbench.action.quickOpen"
-          }
-        ]
-      } //ファイル検索
-    ],
-    "leader": "<space>",
-    "handleKeys": {
-      "<C-a>": false,
-      "<C-f>": false
-    },
-
-    // vimのステータスバー周りの設定
-    "statusBarColorControl": false,
-    "statusBarColors": {
-      "normal": ["#161821", "#818596"],
-      "insert": ["#84A0C6", "#161821"],
-      "visual": ["#B4BE82", "#161821"],
-      "visualline": ["#B4BE82", "#161821"],
-      "visualblock": ["#B4BE82", "#161821"],
-      "replace": ["#E2A478", "#161821"],
-      "commandlineinprogress": ["#818596", "#161821"],
-      "searchinprogressmode": ["#818596", "#161821"],
-      "easymotionmode": ["#818596", "#161821"],
-      "easymotioninputmode": ["#818596", "#161821"],
-      "surroundinputmode": ["#818596", "#161821"]
-    }
-  },
-  //----------------------------------------------------
-  // その他
-  //----------------------------------------------------
-  "files.trimTrailingWhitespace": true,
-  "search.searchOnType": false,
-  "window.zoomLevel": 0,
-  "emmet": {
-    "includeLanguages": {
-      "erb": "html"
-    }
-  },
-  //****************************************************
-  // 拡張機能
-  //****************************************************
-  // spell checker
-  "cSpell": {
-    "enabledLanguageIds": [
-      "css",
-      "html",
-      "javascript",
-      "json",
-      "less",
-      "markdown",
-      "plaintext",
-      "scss",
-      "text",
-      "ruby",
-      "yaml",
-      "yml"
-    ]
-  },
-  // background-cover
-  "backgroundCover": {
-    "imagePath": "/Users/mejamoleo/Pictures/image_for_vscode/max-mckinnon-c9OCWLka764-unsplash.jpg",
-    "randomImageFolder": "/Users/mejamoleo/Pictures/image_for_vscode",
-    "opacity": 1
-  },
-  // vscode インテリコード
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  // beautify フォーマッター
-  "beautify.language": {
-    "js": {
-      "type": ["javascript", "json", "jsonc"],
-      "filename": [".jshintrc", ".jsbeautifyrc"]
-    },
-    "css": ["css", "less", "scss"],
-    "html": ["htm", "html", "erb"]
-  },
-  //----------------------------------------------------
-  // 言語系
-  //----------------------------------------------------
-  "ruby.useBundler": true,
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#161821",
-    "statusBar.noFolderBackground": "#161821",
-    "statusBar.debuggingBackground": "#161821",
-    "statusBar.foreground": "#818596"
-  },
-  "cSpell.userWords": [
-    "CODEBAS",
-    "Gemfile",
-    "Micropost",
-    "bootstrap",
-    "bootstrap sprokets",
-    "datetime",
-    "downcase",
-    "hexdigest",
-    "laravel",
-    "mailtrap",
-    "microposts",
-    "minitest",
-    "mixins",
-    "nonblank",
-    "path",
-    "phper",
-    "postgresql",
-    "railstutorial",
-    "rubygems",
-    "signup",
-    "signup path",
-    "smtp",
-    "sprokets",
-    "sqlite",
-    "stylesheets",
-    "tmpfs",
-    "uneditable",
-    "unfollow",
-    "unfollowed",
-    "upcase",
-    "urlsafe",
-    "vimindmeister"
-  ],
-  //****************************************************
-  // (終わり)
-  //****************************************************
-
-  //****************************************************
-  // 未設定
-  //****************************************************
-  "workbench.colorTheme": "Iceberg",
-  "[json]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
-  },
-  "git.confirmSync": false,
-  "liveServer.settings.donotShowInfoMsg": true,
-  "gitlens.gitCommands.closeOnFocusOut": true,
-  "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  },
-  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1605066114044,
-  "workbench.iconTheme": "material-icon-theme",
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-  "editor.fontFamily": "FiraCode Nerd Font Mono",
-  "intelephense.diagnostics.undefinedClassConstants": false,
-  "intelephense.diagnostics.undefinedConstants": false,
-  "intelephense.diagnostics.undefinedFunctions": false,
-  "intelephense.diagnostics.undefinedMethods": false,
-  "intelephense.diagnostics.undefinedProperties": false,
-  "intelephense.diagnostics.undefinedTypes": false,
-  "explorer.confirmDelete": false,
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "php-cs-fixer.onsave": true,
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.activityBar.visible": false,
-  "explorer.confirmDragAndDrop": false,
-  "git.autofetch": true,
-  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7ZXJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
-  "diffEditor.ignoreTrimWhitespace": false
+	//----------------------------------------------------
+	// ワークベンチ
+	//----------------------------------------------------
+	"workbench": {
+		"colorTheme": "Ayu Dark",
+		"iconTheme": "material-icon-theme",
+		"editor": {
+			"showTabs": true,
+			"highlightModifiedTabs": true,
+			"tabSizing": "shrink",
+			"tabCloseButton": "off"
+		},
+		"startupEditor": "off",
+		"activityBar": {
+			"visible": true
+		}
+	},
+	//----------------------------------------------------
+	// エディタ
+	//----------------------------------------------------
+	"editor": {
+		"fontSize": 11,
+		"fontFamily": "FiraCode Nerd Font Mono",
+		"fontLigatures": true,
+		"wordWrap": "on",
+		"formatOnSave": false,
+		"formatOnPaste": false,
+		"suggestSelection": "first",
+		"minimap": {
+			"enabled": false
+		},
+		"tabSize": 4,
+		"detectIndentation": false
+	},
+	//----------------------------------------------------
+	// ターミナル
+	//----------------------------------------------------
+	"terminal.integrated": {
+		"copyOnSelection": true,
+		"fontSize": 10,
+		"fontFamily": "FiraCode Nerd Font Mono"
+	},
+	//----------------------------------------------------
+	// vim
+	//----------------------------------------------------
+	"vim": {
+		"easymotion": true,
+		"easymotionMarkerForegroundColorOneChar": "#00F0AA",
+		"easymotionDimBackground": false,
+		"easymotionMarkerWidthPerChar": 19,
+		"easymotionMarkerHeight": 0,
+		"easymotionMarkerFontFamiliy": "Cica",
+		"easymotionMarkerFontSize": "12.5",
+		"easymotionMarkerFontWeight": "bold",
+		"easymotionKeys": "asdfhjklwqeruioopghty;",
+		"easymotionMarkerYOffset": 13.5,
+		"easymotionmarkerforegroundcoloronechar": "#da70d6",
+		"incsearch": true,
+		"usesystemclipboard": true,
+		"useCtrlKeys": true,
+		"hlsearch": true,
+		"sorround": true,
+		// vimキーバインド変更
+		"insertModeKeyBindings": [
+			{
+				"before": [
+					"j",
+					"j"
+				],
+				"after": [
+					"<Esc>"
+				]
+			}
+		],
+		"normalModeKeyBindingsNonRecursive": [
+			{
+				"before": [
+					"<leader>",
+					"d"
+				],
+				"after": [
+					"d",
+					"d"
+				]
+			},
+			{
+				"before": [
+					"<C-n>"
+				],
+				"commands": [
+					":nohl"
+				]
+			},
+			{
+				"before": [
+					"s",
+					"h"
+				],
+				"after": [
+					"<C-w>",
+					"h"
+				]
+			},
+			{
+				"before": [
+					"s",
+					"j"
+				],
+				"after": [
+					"<C-w>",
+					"j"
+				]
+			},
+			{
+				"before": [
+					"s",
+					"k"
+				],
+				"after": [
+					"<C-w>",
+					"k"
+				]
+			},
+			{
+				"before": [
+					"s",
+					"l"
+				],
+				"after": [
+					"<C-w>",
+					"l"
+				]
+			},
+			{
+				"before": [
+					"g",
+					"l"
+				],
+				"after": [
+					"g",
+					"t"
+				]
+			},
+			{
+				"before": [
+					"g",
+					"h"
+				],
+				"after": [
+					"g",
+					"T"
+				]
+			},
+			{
+				"before": [
+					"]"
+				],
+				"commands": [
+					{
+						"command": "C_Cpp.PeekDeclaration"
+					}
+				],
+				"when": [
+					"editorLangId == c"
+				]
+			}, //宣言を見る c専用
+			{
+				"before": [
+					"["
+				],
+				"commands": [
+					{
+						"command": "editor.action.peekDefinition"
+					}
+				]
+			}, //定義を見る
+			{
+				"before": [
+					"s",
+					"s"
+				],
+				"commands": [
+					":split"
+				]
+			}, //水平に開く
+			{
+				"before": [
+					"s",
+					"v"
+				],
+				"commands": [
+					":vsplit"
+				]
+			}, //垂直に開く
+			{
+				"before": [
+					"<Leader>",
+					":"
+				],
+				"commands": [
+					{
+						"command": "workbench.action.showCommands"
+					}
+				]
+			}, //コマンドパレット
+			{
+				"before": [
+					"<Leader>",
+					";"
+				],
+				"commands": [
+					{
+						"command": "workbench.action.quickOpen"
+					}
+				]
+			} //ファイル検索
+		],
+		"leader": "<space>",
+		// vimのステータスバー周りの設定
+		"statusBarColorControl": false
+	},
+	//----------------------------------------------------
+	// その他
+	//----------------------------------------------------
+	"files.trimTrailingWhitespace": true,
+	"files.autoSave": "off",
+	"search.searchOnType": false,
+	"window.zoomLevel": 0,
+	"emmet": {
+		"includeLanguages": {
+			"erb": "html"
+		}
+	},
+	//****************************************************
+	// 拡張機能
+	//****************************************************
+	// spell checker
+	"cSpell": {
+		"enabledLanguageIds": [
+			"css",
+			"html",
+			"javascript",
+			"json",
+			"less",
+			"markdown",
+			"plaintext",
+			"scss",
+			"text",
+			"ruby",
+			"yaml",
+			"yml"
+		]
+	},
+	// background-cover
+	"backgroundCover": {
+		"imagePath": "/Users/mejamoleo/Pictures/image_for_vscode/max-mckinnon-c9OCWLka764-unsplash.jpg",
+		"randomImageFolder": "/Users/mejamoleo/Pictures/image_for_vscode",
+		"opacity": 1
+	},
+	// vscode インテリコード
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	// beautify フォーマッター
+	"beautify.language": {
+		"js": {
+			"type": [
+				"javascript",
+				"json",
+				"jsonc"
+			],
+			"filename": [
+				".jshintrc",
+				".jsbeautifyrc"
+			]
+		},
+		"css": [
+			"css",
+			"less",
+			"scss"
+		],
+		"html": [
+			"htm",
+			"html",
+			"erb"
+		]
+	},
+	//----------------------------------------------------
+	// 言語系
+	//----------------------------------------------------
+	"ruby.useBundler": true,
+	"cSpell.userWords": [
+		"CODEBAS",
+		"Gemfile",
+		"Micropost",
+		"bootstrap",
+		"bootstrap sprokets",
+		"datetime",
+		"downcase",
+		"hexdigest",
+		"laravel",
+		"mailtrap",
+		"microposts",
+		"minitest",
+		"mixins",
+		"nonblank",
+		"path",
+		"phper",
+		"postgresql",
+		"railstutorial",
+		"rubygems",
+		"signup",
+		"signup path",
+		"smtp",
+		"sprokets",
+		"sqlite",
+		"stylesheets",
+		"tmpfs",
+		"uneditable",
+		"unfollow",
+		"unfollowed",
+		"upcase",
+		"urlsafe",
+		"vimindmeister"
+	],
+	"[json]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	},
+	// ###############################
+	// 42Tokyo
+	// ###############################
+	"[c]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false,
+		"editor.renderWhitespace": "all",
+		"files.trimTrailingWhitespace": true,
+		"files.insertFinalNewline": true,
+		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+	},
+	"[h]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false,
+		"editor.renderWhitespace": "all",
+		"files.trimTrailingWhitespace": true,
+		"files.insertFinalNewline": true
+	},
+	"clangd.path": "/Users/reo/Library/Application Support/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/11.0.0/clangd_11.0.0/bin/clangd",
+	"explorer.compactFolders": false,
+	"debug.onTaskErrors": "abort",
+	"42header.username": "treo",
+	"42header.email": "treo@student.42tokyo.jp",
+	// ###############################
+	// At Coder
+	// ###############################
+	"code-runner.clearPreviousOutput": true,
+    "code-runner.runInTerminal": true,
+	// ###############################
+	// Others
+	// ###############################
+	"git.confirmSync": false,
+	"gitlens.gitCommands.closeOnFocusOut": true,
+	"[php]": {
+		"editor.defaultFormatter": "junstyle.php-cs-fixer"
+	},
+	"php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+	"php-cs-fixer.lastDownload": 1608000137773,
+	"workbench.iconTheme": "vscode-icons",
+	"intelephense.diagnostics.undefinedClassConstants": false,
+	"intelephense.diagnostics.undefinedConstants": false,
+	"intelephense.diagnostics.undefinedFunctions": false,
+	"intelephense.diagnostics.undefinedMethods": false,
+	"intelephense.diagnostics.undefinedProperties": false,
+	"intelephense.diagnostics.undefinedTypes": false,
+	"explorer.confirmDelete": false,
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"explorer.confirmDragAndDrop": false,
+	"git.autofetch": true,
+	"hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7ZXJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"workbench.colorTheme": "Visual Studio Dark",
+	"todo-tree.tree.showScanModeButton": false,
+	"editor.insertSpaces": false,
+	"editor.renderWhitespace": "all",
+	"workbench.activityBar.visible": false,
+	"workbench.editor.showTabs": true,
+	"python.languageServer": "Microsoft",
+	"[cpp]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
 }
