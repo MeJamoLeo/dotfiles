@@ -12,7 +12,7 @@
   branch = auto
   interactive = auto
   grep = auto
-  ui = auto
+	ui = auto
 [alias]
   a = "!git status --short | peco | awk '{print $2}' | xargs git add"
   d = diff

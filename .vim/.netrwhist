@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/treo/dotfiles/.git'
 let g:netrw_dirhist_6='/Users/reo/.anyenv/envs/rbenv'
 let g:netrw_dirhist_5='/Users/reo/.anyenv/envs'
 let g:netrw_dirhist_4='/Users/reo/Workspace/42/c/intra-uuid-04d9613c-dd0a-4e27-9790-81fbd42d0f87-3448311/ex06'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_1='/Users/reo/Workspace/42/c/bsq'
 let g:netrw_dirhist_0='/Users/reo/Workspace/42/c/bsq/srcs'
 let g:netrw_dirhist_9='/Users/reo/Workspace/42/c/bsq/includes'
 let g:netrw_dirhist_8='/Users/reo/Workspace/42/c/cpc09/ex00'
-let g:netrw_dirhist_7='/Users/reo/Workspace/42/c/bsq/srcs'
