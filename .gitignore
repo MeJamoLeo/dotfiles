@@ -33,4 +33,4 @@ Session.vim
 .vim/syntax/Dockerfile.vim
 .vim/snippets/
 
-.config/anyenv
+.config/*/*

@@ -52,5 +52,7 @@ set backspace=start,eol,indent
 set path+=**
 set wildignore+=*/node_modules/*
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set cursorline
+set cursorcolumn
 
 source ~/.vimrc.maps

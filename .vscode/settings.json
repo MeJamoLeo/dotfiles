@@ -226,7 +226,6 @@
 	"files.trimTrailingWhitespace": true,
 	"files.autoSave": "off",
 	"search.searchOnType": false,
-	"window.zoomLevel": 0,
 	"emmet": {
 		"includeLanguages": {
 			"erb": "html"
@@ -393,8 +392,9 @@
 	"editor.renderWhitespace": "all",
 	"workbench.activityBar.visible": false,
 	"workbench.editor.showTabs": true,
-	"python.languageServer": "Microsoft",
+	"python.languageServer": "Pylance",
 	"[cpp]": {
 		"editor.defaultFormatter": "ms-vscode.cpptools"
 	},
+	"prettier.useTabs": true,
 }

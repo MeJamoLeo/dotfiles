@@ -41,6 +41,8 @@ function atcoder () {
   nvim $1 -o stdin.txt -c "11 wincmd +" 
 }
 
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:~/Workspace/AtCoder/include/
+
 ###########################
 # 分割ファイルの読み込み
 ############################
