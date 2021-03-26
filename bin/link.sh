@@ -10,4 +10,5 @@ ln -f -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 ln -f -s ~/dotfiles/.vimrc ~/.vimrc
 ln -f -s ~/dotfiles/.vimrc.maps ~/.vimrc.maps
+ln -f -s ~/dotfiles/.vimrc.funcs ~/.vimrc.funcs
 ln -f -s ~/dotfiles/.vim ~/.vim
