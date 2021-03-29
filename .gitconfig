@@ -57,3 +57,7 @@
 	process = git-lfs filter-process
 [ghq]
   root = ~/.ghq
+[commit]
+	template = /Users/treo/dotfiles/.github/commit.template
+[init]
+	defaultBranch = main

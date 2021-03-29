@@ -46,7 +46,7 @@ set shiftwidth=4
 set tabstop=4
 set ai "Auto indent
 set si "Smart indent
-set nowrap "No Wrap lines
+set wrap
 set backspace=start,eol,indent
 " Finding files - Search down into subfolders
 set path+=**
@@ -56,3 +56,4 @@ set cursorline
 set cursorcolumn
 
 source ~/.vimrc.maps
+source ~/.vimrc.funcs
