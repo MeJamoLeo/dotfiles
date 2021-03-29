@@ -1,4 +1,9 @@
 source ~/.vimrc
+autocmd TermOpen * startinsert
+if has('nvim')
+    command! -nargs=* Term split | terminal <args>
+    command! -nargs=* Termv vsplit | terminal <args>
+endif
 
 " ------------------------------------------------------------
 " dein
@@ -13,7 +18,6 @@ let s:dein_dir = expand('~/.vim/dein')
 let s:dein_repo_dir = s:dein_dir .  '/repos/github.com/Shougo/dein.vim'
 " tomlのディレクトリへのパス
 let s:toml_dir = expand('~/.config/nvim')
-
 " Required:
 execute 'set runtimepath^=' . s:dein_repo_dir
 
@@ -44,8 +48,3 @@ endif
 "  Atcoder
 " ------------------------------------------------------------
 autocmd BufNewFile ~/Workspace/AtCoder/*/*.cpp :0r ~/.config/nvim/templates/atcoder.cpp
-
-" ------------------------------------------------------------
-"  プラグインを用いた関数の処理
-" ------------------------------------------------------------
-source ~/.vimrc.funcs

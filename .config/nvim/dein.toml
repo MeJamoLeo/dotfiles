@@ -1,13 +1,39 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+
+# ------------------------------------
+# Shogo
+# ------------------------------------
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add='''
+source ~/.config/nvim/plugins/denite.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+depends = ['defx-git', 'defx-icons']
+hook_add = """
+source ~/.config/nvim/plugins/defx.rc.vim
+"""
+
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-git'
+
 # ------------------------------------
 # 見た目系
 # ------------------------------------
 [[plugins]]
 repo = 'jacoborus/tender.vim'
 hook_add = '''
-    colorscheme tender
+    " colorscheme tender
+    colorscheme xcodewwdc
     set background=dark
     syntax on
     set t_Co=256
@@ -66,3 +92,16 @@ hook_add = '''
     \   'rg --line-number --no-heading '.shellescape(<q-args>), 0,
     \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:50%:wrap'))
 '''
+
+# ------------------------------------
+# エディタ便利系
+# ------------------------------------
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
+repo = 'skanehira/translate.vim'
+

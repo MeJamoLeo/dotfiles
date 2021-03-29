@@ -1,5 +1,11 @@
+let mapleader = "\<Space>"
+
 inoremap <silent> jj <ESC>
 nnoremap <S-C-p> "0p
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " Delete without yank
 nnoremap <leader>d "_d
 nnoremap x "_x
@@ -67,3 +73,12 @@ nmap <C-w><down> <C-w>-
 
 "-- fugitive
 cnoreabbrev gopen Gbrowse
+
+"-- defx
+nnoremap <silent> <Leader>f :<C-u> Defx <CR>
+"-- denite
+nnoremap <silent> ;f :<C-u>Denite file/rec<CR>
+nnoremap <silent> ;g :<C-u>Denite grep<CR>
+nnoremap <silent> ;b :<C-u>Denite buffer<CR>
+nnoremap <silent> ;l :<C-u>Denite line<CR>
+
