@@ -6,6 +6,9 @@ scriptencoding utf-8
 if !1 | finish | endif
 
 set number
+set cursorline
+set list
+hi clear CursorLine
 set nocompatible
 syntax enable
 set fileencodings=utf-8,sjis,euc-jp,latin
@@ -18,9 +21,10 @@ set showcmd
 set cmdheight=1
 set laststatus=2
 set scrolloff=10
-set expandtab
+" set expandtab
 set shell=zsh
 set backupskip=/tmp/*,/private/tmp/*
+au FileType vim setlocal foldmethod=marker
 
 " incremental substitution (neovim)
 if has('nvim')
@@ -52,8 +56,12 @@ set backspace=start,eol,indent
 set path+=**
 set wildignore+=*/node_modules/*
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-set cursorline
-set cursorcolumn
+
+autocmd TermOpen * startinsert
+if has('nvim')
+    command! -nargs=* Term split | terminal <args>
+    command! -nargs=* Termv vsplit | terminal <args>
+endif
 
 source ~/.vimrc.maps
 source ~/.vimrc.funcs

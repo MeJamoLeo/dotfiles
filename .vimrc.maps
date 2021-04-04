@@ -1,24 +1,21 @@
-let mapleader = "\<Space>"
+let mapleader = " "
 
 inoremap <silent> jj <ESC>
 nnoremap <S-C-p> "0p
 
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" Delete without yank
-nnoremap <leader>d "_d
-nnoremap x "_x
-
-" Increment/decrement
-nnoremap + <C-a>
-nnoremap - <C-x>
+" edit init.nvim
+nnoremap <leader>i :vsplit $MYVIMRC<CR> 
+" edit init.nvim
+nnoremap <leader>rc :vsplit ~/.vimrc<CR> 
+" edit .vimrc.maps -> evm 
+nnoremap <leader>m :vsplit ~/.vimrc.maps<CR>
+" edit plugin
+nnoremap <leader>p :vsplit ~/.config/nvim/plugins<CR>
+" edit toml
+nnoremap <leader>t :vsplit ~/.config/nvim/dein.toml<CR>
 
 " Delete a word backwards
 nnoremap dw vb"_d
-
-" Select all
-nmap <C-a> gg<S-v>G
 
 " Open BufExplorer
 nmap \\ \be
@@ -28,28 +25,71 @@ command! W w !sudo tee > /dev/null %
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
-  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-  \gvy/<C-R><C-R>=substitute(
-  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-  \gV:call setreg('"', old_reg, old_regtype)<CR>
+            \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+            \gvy/<C-R><C-R>=substitute(
+            \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+            \gV:call setreg('"', old_reg, old_regtype)<CR>
 vnoremap <silent> # :<C-U>
-  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-  \gvy?<C-R><C-R>=substitute(
-  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-  \gV:call setreg('"', old_reg, old_regtype)<CR>
+            \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+            \gvy?<C-R><C-R>=substitute(
+            \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+            \gV:call setreg('"', old_reg, old_regtype)<CR>
+
+" Off highlit
+nmap <Esc><Esc> :nohl<CR>
 
 "-------------------------------------------------------------------------------
 " Tabs
 "-------------------------------------------------------------------------------
-" Open current directory
-nmap te :tabedit 
-nmap <S-Tab> :tabprev<Return>
-nmap <Tab> :tabnext<Return>
+" Anywhere SID.{{{
+function! s:SID_PREFIX()
+  return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
+endfunction
+
+" Set tabline.
+function! s:my_tabline()
+  let s = ''
+  for i in range(1, tabpagenr('$'))
+    let bufnrs = tabpagebuflist(i)
+    let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
+    let no = i  " display 0-origin tabpagenr.
+    let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
+    let title = fnamemodify(bufname(bufnr), ':t')
+    let title = '[' . title . ']'
+    let s .= '%'.i.'T'
+    let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
+    let s .= no . ':' . title
+    let s .= mod
+    let s .= '%#TabLineFill# '
+  endfor
+  let s .= '%#TabLineFill#%T%=%#TabLine#'
+  return s
+endfunction
+let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
+set showtabline=2 " 常にタブラインを表示
+
+" The prefix key.
+nnoremap    [Tag]   <Nop>
+nmap    t [Tag]
+" Tab jump
+for n in range(1, 9)
+  execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
+endfor
+" t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
+
+map <silent> [Tag]c :tablast <bar> tabnew<CR>
+" gc 新しいタブを一番右に作る
+map <silent> [Tag]x :tabclose<CR>
+" gx タブを閉じる
+map <silent> [Tag]u :tabnext<CR>
+" gy 次のタブ
+map <silent> [Tag]y :tabprevious<CR>
+" gu 前のタブ}}}
 
 "-------------------------------------------------------------------------------
 " Windows
 "-------------------------------------------------------------------------------
-" Split window
+" Split window{{{
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 " Move window
@@ -61,24 +101,29 @@ map sh <C-w>h
 map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
+
+" Increment/decrement
+nnoremap + <C-a>
+nnoremap - <C-x>
+
+" Select all
+nmap <C-a> gg<S-v>G
+
 " Resize window
 nmap <C-w><left> <C-w><
 nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
 nmap <C-w><down> <C-w>-
+"}}}
 
 "-------------------------------------------------------------------------------
 " Plugins
 "-------------------------------------------------------------------------------
 
-"-- fugitive
+"-- fugitive{{{
 cnoreabbrev gopen Gbrowse
 
-"-- defx
-nnoremap <silent> <Leader>f :<C-u> Defx <CR>
-"-- denite
-nnoremap <silent> ;f :<C-u>Denite file/rec<CR>
-nnoremap <silent> ;g :<C-u>Denite grep<CR>
-nnoremap <silent> ;b :<C-u>Denite buffer<CR>
-nnoremap <silent> ;l :<C-u>Denite line<CR>
-
+"-- oj_helper
+nnoremap <leader>ojd :OjDownloadSamples
+nnoremap <leader>ojt :OjLangCommandTest python
+nnoremap <leader>ojs :OjSubmitCode"}}}
