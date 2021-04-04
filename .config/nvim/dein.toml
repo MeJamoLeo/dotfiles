@@ -32,22 +32,39 @@ repo = 'kristijanhusak/defx-git'
 [[plugins]]
 repo = 'jacoborus/tender.vim'
 hook_add = '''
-    " colorscheme tender
-    colorscheme xcodewwdc
-    set background=dark
-    syntax on
-    set t_Co=256
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" colorscheme tender
+set background=dark
+syntax on
+set t_Co=256
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 '''
 
 [[plugins]]
 repo = 'lilydjwg/colorizer'
+
+[[plugins]]
+repo = 'tomasiser/vim-code-dark'
+hook_add = '''
+colorscheme codedark
+let g:airline_theme = 'codedark'
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
 
 # ------------------------------------
 # Git系
 # ------------------------------------
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
 
 # ------------------------------------
 # LSP
@@ -56,23 +73,10 @@ repo = 'airblade/vim-gitgutter'
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 build = '''
-  git checkout release
+git checkout release
 '''
 hook_add = '''
-  inoremap <silent><expr> <TAB>
-        \ pumvisible() ? "\<C-n>" :
-        \ <SID>check_back_space() ? "\<TAB>" :
-        \ coc#refresh()
-  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-  function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-  endfunction
-  nmap <silent> gd <Plug>(coc-definition)
-  nmap <silent> gy <Plug>(coc-type-definition)
-  nmap <silent> gi <Plug>(coc-implementation)
-  nmap <silent> gr <Plug>(coc-references)
+source ~/.config/nvim/plugins/coc.rc.vim
 '''
 
 # ------------------------------------
@@ -87,10 +91,10 @@ merged = '0'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
-  command! -bang -nargs=* Rg
-    \ call fzf#vim#grep(
-    \   'rg --line-number --no-heading '.shellescape(<q-args>), 0,
-    \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:50%:wrap'))
+command! -bang -nargs=* Rg
+\ call fzf#vim#grep(
+        \   'rg --line-number --no-heading '.shellescape(<q-args>), 0,
+        \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:50%:wrap'))
 '''
 
 # ------------------------------------
@@ -104,4 +108,24 @@ repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'skanehira/translate.vim'
+
+[[plugins]]
+repo = 'sirver/ultisnips'
+hook_add = '''
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="horizontal"
+'''
+
+# ------------------------------------
+# Atcoder
+# ------------------------------------
+[[plugins]]
+repo = 'my0k/vim-oj-helper'
 

@@ -1,9 +1,4 @@
 source ~/.vimrc
-autocmd TermOpen * startinsert
-if has('nvim')
-    command! -nargs=* Term split | terminal <args>
-    command! -nargs=* Termv vsplit | terminal <args>
-endif
 
 " ------------------------------------------------------------
 " dein
@@ -43,8 +38,3 @@ filetype plugin indent on
 if dein#check_install()
   call dein#install()
 endif
-
-" ------------------------------------------------------------
-"  Atcoder
-" ------------------------------------------------------------
-autocmd BufNewFile ~/Workspace/AtCoder/*/*.cpp :0r ~/.config/nvim/templates/atcoder.cpp

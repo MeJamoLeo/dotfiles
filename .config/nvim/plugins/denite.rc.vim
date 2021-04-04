@@ -29,3 +29,9 @@ call denite#custom#var('file/rec', 'command',
             \ ['rg', '--files', '--glob', '!.git', '--color', 'never'])
 " Change default action.
 call denite#custom#kind('file', 'default_action', 'split')
+
+"-- keymap
+nnoremap <silent> ;f :<C-u>Denite file/rec<CR>
+nnoremap <silent> ;g :<C-u>Denite grep<CR>
+nnoremap <silent> ;b :<C-u>Denite buffer<CR>
+nnoremap <silent> ;l :<C-u>Denite line<CR>
