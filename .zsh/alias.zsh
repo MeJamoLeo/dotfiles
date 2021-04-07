@@ -48,3 +48,5 @@ alias gsp='git stash pop'
 
 alias lag='lazygit'
 alias lad='lazydocker'
+
+alias intra='GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_intra"'
