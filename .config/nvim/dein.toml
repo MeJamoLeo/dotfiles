@@ -45,7 +45,8 @@ repo = 'lilydjwg/colorizer'
 [[plugins]]
 repo = 'tomasiser/vim-code-dark'
 hook_add = '''
-colorscheme codedark
+" colorscheme codedark
+colorscheme darkblue
 let g:airline_theme = 'codedark'
 '''
 

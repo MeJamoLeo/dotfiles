@@ -40,8 +40,5 @@ if [ -d $ZSHHOME -a -r $ZSHHOME -a \
         done
 fi
 
-###########################
 # オリジナルスクリプト
-############################
 export PATH=$HOME/dotfiles/bin:$PATH
-

@@ -50,3 +50,9 @@ alias lag='lazygit'
 alias lad='lazydocker'
 
 alias intra='GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_intra"'
+alias norminette='~/.anyenv/envs/pyenv/versions/3.9.1/bin/norminette'
+alias norm="norminette"
+
+# man-jp
+alias eman='env LANG=en man'
+alias man='env LANG=ja_JP.UTF-8 man'

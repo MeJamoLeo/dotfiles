@@ -14,3 +14,19 @@ lazy = 1
 on_cmd = ['SyntaxIgnore', 'SyntaxInclude']
 on_func = ['SyntaxRange']
 depends = 'vim-ingo-library'
+
+# ------------------------------------
+# toml syntax
+# ------------------------------------
+[[plugins]]
+repo = 'pbondoer/vim-42header'
+lazy = 1
+on_ft = ['c','js']
+
+# ------------------------------------
+# markdown
+# ------------------------------------
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+lazy = 1
+on_ft = ['md']

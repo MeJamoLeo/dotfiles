@@ -11,6 +11,7 @@ set list
 hi clear CursorLine
 set nocompatible
 syntax enable
+set clipboard+=unnamed
 set fileencodings=utf-8,sjis,euc-jp,latin
 set encoding=utf-8
 set title
