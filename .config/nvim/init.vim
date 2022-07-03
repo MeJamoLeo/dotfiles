@@ -7,11 +7,8 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-" Pluginディレクトリのパス
-let s:dein_dir = expand('~/.vim/dein')
-" dein.vimのパス
+let s:dein_dir = expand('~/.cashe/dein')
 let s:dein_repo_dir = s:dein_dir .  '/repos/github.com/Shougo/dein.vim'
-" tomlのディレクトリへのパス
 let s:toml_dir = expand('~/.config/nvim')
 " Required:
 execute 'set runtimepath^=' . s:dein_repo_dir
@@ -20,10 +17,7 @@ execute 'set runtimepath^=' . s:dein_repo_dir
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
-  " 起動時に読み込むプラグイン群のtoml
   call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
-
-  " 利用時に読み込むプラグインのtoml
   call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
 
   " Required:
@@ -33,6 +27,7 @@ endif
 
 " Required:
 filetype plugin indent on
+syntax enable
 
 " If you want to install not installed plugins on startup.    
 if dein#check_install()

@@ -154,19 +154,6 @@
 			},
 			{
 				"before": [
-					"]"
-				],
-				"commands": [
-					{
-						"command": "C_Cpp.PeekDeclaration"
-					}
-				],
-				"when": [
-					"editorLangId == c"
-				]
-			}, //宣言を見る c専用
-			{
-				"before": [
 					"["
 				],
 				"commands": [
